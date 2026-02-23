@@ -1,0 +1,1208 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+	<title>{{EMPRESA}} - Inicio</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="description" content="Lucid Bootstrap 4x Admin Template">
+	<meta name="author" content="WrapTheme, design by: ThemeMakker.com">
+
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<!-- VENDOR CSS --> 
+	<link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+	<link rel="stylesheet" href="../assets/vendor/bootstrap-colorpicker/css/bootstrap-colorpicker.css" />
+	<link rel="stylesheet" href="../assets/vendor/multi-select/css/multi-select.css">
+	<link rel="stylesheet" href="../assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.css">
+	<link rel="stylesheet" href="../assets/vendor/nouislider/nouislider.min.css" />
+	<link rel="stylesheet" href="../assets/vendor/bootstrap-multiselect/bootstrap-multiselect.css"/>
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/color_skins.css">
+	<!-- Portlets -->
+	<link rel="stylesheet" href="assets/css/portlet.css">
+	<link rel="stylesheet" href="assets/css/style_edit.css">	
+    <style>
+        .multiselect-container {
+			overflow-y: scroll !important ;
+			height: 250px !important;
+        }
+	</style>
+
+<!-- Demo CSS not Include in project -->
+<style>
+    .demo-card label{ display: block; position: relative;}
+    .demo-card .col-lg-4{ margin-bottom: 30px;}
+</style>
+
+<style type="text/css">
+#container {
+    height: 420px;
+}
+
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 360px;
+    max-width: 600px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+		</style>
+		
+</head>
+<body class="theme-erp layout-fullwidth page-calendar">
+
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="m-t-30"><img src="../assets/images/logo1.png" width="48" height="48" ></div>
+        <p>Espere...</p>        
+    </div>
+</div>
+<!-- Overlay For Sidebars -->
+
+<div id="wrapper">
+
+	<nav class="navbar navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-btn">
+				<button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
+			</div>
+
+			<div class="navbar-brand">
+				<a href="index.html"><img src="../assets/images/logo1.png" alt="Logo" class="img-responsive logo"></a>
+			</div>
+			<a href="javascript:void(0);" class="btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-circle-right fa-2x"></i></a>
+
+			<div class="navbar-right">
+				<div id="navbar-menu" class="notificaciones">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="javascript:void(0);" class="dropdown-toggle icon-menu" id="notificaciones">
+								<i class="icon-bell"></i>
+								<span class="notification-dot"></span>
+							</a>
+							<ul id="listaNotificaciones" class="dropdown-menu notifications shake">
+								<div class="col-md-12 col-lg-12 " style="padding: 0px;">
+									<div class="card">
+										<div class="body sidebar">
+											<ul class="nav nav-tabs nav-justified">
+												<li class="nav-item">
+													<a data-idtiponotificacion="-1" class="nav-link show icon-menu btnMenuTipoNotificacion active" data-toggle="tab" href="#todas">
+														<span class="fa fa-th"></span>
+														<br><small>Todas</small>
+														<span class="ContadorTotalNotificaciones_NavItem" id="txtTotalNot_Total">10</span>
+													</a>
+												</li>
+												<li class="nav-item">
+													<a data-idtiponotificacion="1" class="nav-link icon-menu btnMenuTipoNotificacion" data-toggle="tab" href="#alerta">
+														<span class="icon-info"></span>
+														<br><small>Alerta</small>
+														<span class="ContadorTotalNotificaciones_NavItem" id="txtTotalNot_1">3</span>
+													</a>
+												</li>
+												<li class="nav-item">
+													<a data-idtiponotificacion="2" class="nav-link icon-menu btnMenuTipoNotificacion" data-toggle="tab" href="#calendario">
+														<span class="fa fa-calendar"></span>
+														<br><small> Citas y Presentaciones</small>
+														<span class="ContadorTotalNotificaciones_NavItem" id="txtTotalNot_2">4</span>
+													</a>
+												</li>
+												<li class="nav-item">
+													<a data-idtiponotificacion="3" class="nav-link icon-menu btnMenuTipoNotificacion" data-toggle="tab" href="#recordatorio">
+														<span class="fa fa-exclamation-triangle"></span>
+														<br><small>  Recordatorio</small>
+														<span class="ContadorTotalNotificaciones_NavItem" id="txtTotalNot_3">3</span>
+													</a>
+												</li>
+											</ul>
+											<div class="tab-content sidebar">
+												<div class="tab-pane sidebar show active" id="todas">
+													<ul class="notificaicones-list sidebar">
+														<li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="icon-info text-warning"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Campaign <strong>Holiday Sale</strong> is nearly reach budget limit.</p>
+																		<span class="timestamp">10:00 AM Today</span>
+																	</div>
+																</div>
+															</a>
+														</li>                               
+														<li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="icon-like text-success"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Your New Campaign <strong>Holiday Sale</strong> is approved.</p>
+																		<span class="timestamp">11:30 AM Today</span>
+																	</div>
+																</div>
+															</a>
+														</li>
+														 <li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="icon-pie-chart text-info"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Website visits from Twitter is 27% higher than last week.</p>
+																		<span class="timestamp">04:00 PM Today</span>
+																	</div>
+																</div>
+															</a>
+														</li>
+														<li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="icon-info text-danger"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Error on website analytics configurations</p>
+																		<span class="timestamp">Yesterday</span>
+																	</div>
+																</div>
+															</a>
+														</li>
+														<li class="footer"><a href="notificacion.html" class="more">Ver todas las notificaciones</a></li>
+													</ul>
+												</div>
+												<div class="tab-pane sidebar" id="alerta">
+													<ul class="notificaicones-list">
+														<li class="header"><strong>Alerta de Prospectos que vencieron el blindaje (30 días)</strong></li>
+														 <li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="icon-info text-info"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Website visits from Twitter is 27% higher than last week.</p>
+																		<span class="timestamp">04:00 PM Today</span>
+																	</div>
+																</div>
+															</a>
+														</li>
+														 <li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="icon-info text-info"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Website visits from Twitter is 27% higher than last week.</p>
+																		<span class="timestamp">04:00 PM Today</span>
+																	</div>
+																</div>
+															</a>
+														</li>
+														 <li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="icon-info text-info"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Website visits from Twitter is 27% higher than last week.</p>
+																		<span class="timestamp">04:00 PM Today</span>
+																	</div>
+																</div>
+															</a>
+														</li> 
+														<li class="footer"><a href="notificacion.html" class="more">Ver todas las notificaciones</a></li>
+													</ul>
+												</div>
+												<div class="tab-pane sidebar" id="calendario">
+												   <ul class="notificaicones-list">
+														<li class="header"><strong>Citas y Presentaciones 24 horas próximas a vencer</strong></li>
+														<li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="fa fa-calendar text-warning"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Campaign <strong>Holiday Sale</strong> is nearly reach budget limit.</p>
+																		<span class="timestamp">10:00 AM Today</span>
+																	</div>
+																</div>
+															</a>
+														</li> 
+														<li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="fa fa-calendar text-warning"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Campaign <strong>Holiday Sale</strong> is nearly reach budget limit.</p>
+																		<span class="timestamp">10:00 AM Today</span>
+																	</div>
+																</div>
+															</a>
+														</li>    
+														<li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="fa fa-calendar text-warning"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Campaign <strong>Holiday Sale</strong> is nearly reach budget limit.</p>
+																		<span class="timestamp">10:00 AM Today</span>
+																	</div>
+																</div>
+															</a>
+														</li>    
+														<li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="fa fa-calendar text-warning"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Campaign <strong>Holiday Sale</strong> is nearly reach budget limit.</p>
+																		<span class="timestamp">10:00 AM Today</span>
+																	</div>
+																</div>
+															</a>
+														</li>       
+														<li class="footer"><a href="notificacion.html" class="more">Ver todas las notificaciones</a></li>
+													</ul>
+												</div>
+												<div class="tab-pane sidebar" id="recordatorio">
+													<ul class="notificaicones-list">
+														<li class="header"><strong>Cuántos prospectos faltan ingresar en el periodo actual, cantidad de prospectos próximos a vencer, cuántas presentaciones tiene en el periodo, entre otros.</strong></li>
+														<li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="fa fa-exclamation-triangle text-danger"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Error on website analytics configurations</p>
+																		<span class="timestamp">Yesterday</span>
+																	</div>
+																</div>
+															</a>
+														</li>
+														<li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="fa fa-exclamation-triangle text-danger"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Error on website analytics configurations</p>
+																		<span class="timestamp">Yesterday</span>
+																	</div>
+																</div>
+															</a>
+														</li>
+														<li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="fa fa-exclamation-triangle text-danger"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Error on website analytics configurations</p>
+																		<span class="timestamp">Yesterday</span>
+																	</div>
+																</div>
+															</a>
+														</li>
+													 
+														<li class="footer"><a href="notificacion.html" class="more">Ver todas las notificaciones</a></li>
+													</ul>
+												</div>											
+											</div>
+										</div>
+									</div>
+								</div>
+							</ul>
+						</li>
+						<li><a href="#" class="icon-menu d-none d-sm-block rightbar_btn"><i class="fa fa-windows"></i><span class="blue"><strong> Administración</strong></span></a></li>
+						&nbsp;&nbsp;
+						<li><a href="page-login.html" class="icon-menu"><i class="icon-login"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<div id="rightbar" class="sidebar rightbar">
+		<div class="sidebar-scroll">
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs">
+				<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#mantenedores"><i class="icon-book-open" title="Mantenedores de Tablas"></i> Tablas</a></li>
+				<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#configuracion"><i class="icon-settings" title="Configuración"></i> Config.</a></li>
+				<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#faq"><i class="icon-question" title="FAQ"></i></a></li>
+			</ul>
+			<!-- Tab panes -->
+			<div class="tab-content">
+                <div class="tab-pane animated fadeIn active" id="mantenedores">
+                    <nav class="sidebar-nav">
+                        <ul class="main-menu metismenu">
+                            <li>
+                                <a href="#comercial" class="has-arrow"><i class="fa fa-briefcase"></i><span>Comercial</span></a>
+                                <ul>
+                                    <li><a href="tablas_grupo_venta.html"><i class="icon-list"></i>Grupos de Venta</a></li>
+									<li><a href="tablas_tipo_prospecto.html"><i class="icon-list"></i>Tipo Prospecto</a></li>
+									<li><a href="tablas_origen.html"><i class="icon-list"></i>Origen</a></li>
+									<li><a href="tablas_etapa_venta.html"><i class="icon-list"></i>Etapas de Venta</a></li>
+									<li><a href="tablas_actividad_comercial.html"><i class="icon-list"></i>Actividades Comerciales</a></li>
+                                </ul>
+                            </li>							
+                        </ul>
+                    </nav>
+                </div>
+                <div class="tab-pane animated fadeIn" id="configuracion">
+                    <nav class="sidebar-nav">
+                        <ul class="main-menu metismenu">
+							<li><a href="config_perfiles.html"><i class="fa fa-sliders"></i><span>Perfiles</span></a></li>
+							<li><a href="config_usuarios.html"><i class="icon-users"></i><span>Usuarios</span></a></li>
+							<li><a href="config_empresas.html"><i class="fa fa-building"></i><span>Empresas</span></a></li>
+							<li><a href="config_sedes.html"><i class="fa fa-thumb-tack"></i><span>Sedes</span></a></li>
+							<li><a href="config_periodos.html"><i class="icon-list"></i><span>Periodos</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+				<div class="tab-pane animated fadeIn" id="faq">
+					<form>
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="icon-magnifier"></i></span>
+							</div>
+							<input type="text" class="form-control" placeholder="Search...">
+						</div>
+					</form>
+					<ul class="list-unstyled question">
+						<li class="menu-heading">HOW-TO</li>
+						<li><a href="javascript:void(0);">How to Create Campaign</a></li>
+						<li><a href="javascript:void(0);">Boost Your Sales</a></li>
+						<li><a href="javascript:void(0);">Website Analytics</a></li>
+						<li class="menu-heading">ACCOUNT</li>
+						<li><a href="javascript:void(0);">Cearet New Account</a></li>
+						<li><a href="javascript:void(0);">Change Password?</a></li>
+						<li><a href="javascript:void(0);">Privacy &amp; Policy</a></li>
+						<li class="menu-heading">BILLING</li>
+						<li><a href="javascript:void(0);">Payment info</a></li>
+						<li><a href="javascript:void(0);">Auto-Renewal</a></li>
+						<li class="menu-button m-t-30">
+							<a href="javascript:void(0);" class="btn btn-primary"><i class="icon-question"></i> Need Help?</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="left-sidebar" class="sidebar mini-sidebar">
+		<div class="sidebar-scroll">
+			<div class="user-account">
+				<img src="../assets/images/user.png" class="rounded-circle user-photo" alt="Foto Usuario">
+				<div class="dropdown">
+					<a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>Elí Vera Guevara</strong></a>
+					<ul class="dropdown-menu dropdown-menu-right account animated flipInY">
+						<li><a href="page-profile2.html"><i class="icon-user"></i>Mi Perfil</a></li>
+						<!--<li><a href="app-inbox.html"><i class="icon-envelope-open"></i>Messages</a></li>
+						<li><a href="javascript:void(0);"><i class="icon-settings"></i>Configuración</a></li>-->
+						<li class="divider"></li>
+						<li><a href="page-login.html"><i class="icon-power"></i>Salir</a></li>
+					</ul>
+					<span>Supervisor</span>
+				</div>
+			</div>
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs">
+				<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#modulos"><i class="fa fa-database"></i><b> Módulos</b></a></li>
+				<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#reportes"><i class="fa fa-bar-chart-o"></i><b> Reportes</b></a></li>
+			</ul>
+			<!-- Tab panes -->
+			<div class="tab-content p-l-0 p-r-0">
+				<div class="tab-pane animated fadeIn active" id="modulos">
+					<nav class="sidebar-nav">
+						<ul class="main-menu metismenu">
+                            <li class="active"><a href="index.html"><i class="fa fa-home"></i><span><b>Inicio</b></span></a></li> <!-- class="active" -->
+                            <li>
+                                <a href="#rrhh" class="has-arrow"><i class="fa fa-users"></i><span><b>Recursos Humanos</b></span></a>
+                                <ul>
+									<li><a href="rrhh_colaboradores.html">Gestión de Colaboradores</a></li>
+                                </ul>
+                            </li>							
+                            <li>
+                                <a href="#comercial" class="has-arrow"><i class="fa fa-briefcase"></i><span><b>Comercial</b></span></a>
+                                <ul>
+									<li>
+										<a href="#crm" class="has-arrow"><i class="fa fa-suitcase"></i><span>CRM</span></a>
+										<ul>
+											<li><a href="comercial_crm_prospectos.html">Prospectos</a></li>
+											<li><a href="comercial_crm_actividad_comercial.html">Actividades Comerciales</a></li>
+											<li><a href="comercial_crm_cotizaciones.html">Cotizaciones</a></li>
+										</ul>										
+									</li>
+									<li>
+										<a href="#ventas" class="has-arrow"><i class="fa fa-shopping-cart"></i><span>Gestión de Ventas</span></a>
+										<ul>
+											<li><a href="comercial_ventas_contratos.html">Contratos</a></li>
+											<li><a href="comercial_ventas_seguimiento_cobros.html">Seguimiento Cobros</a></li>
+										</ul>
+									</li>
+                                </ul>
+                            </li>													
+                        </ul>
+					</nav>
+				</div>
+				<div class="tab-pane animated fadeIn" id="reportes">
+					<nav class="sidebar-nav">
+						<ul class="main-menu metismenu">
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="main-content">
+		<div class="container-fluid">
+			<div class="block-header">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 c_breadcrumbs">
+						<ul>
+							<li><a href="index.html"><i class="fa fa-home"></i></a></li>
+							<li><b><a href="javascript:void(0);">Inicio</a></b></li>
+						</ul>
+					</div>				
+				</div>
+			</div>			
+			<div class="row clearfix">
+				<div class="col-lg-12 col-md-12">
+					<div class="card portlet box">				
+						<div class="header portlet-title">
+							<h2>Dashboard CRM</h2>
+							<div class="tools">
+								<ul class="header-dropdown">
+									<li><a class="btn btn-erp" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample" title="Agregar filtros"><i class="fa fa-filter"></i> Filtrar</a></li>							
+									<li><a href="" class="btn btn-erp fullscreen" title="Pantalla Completa"><i class="fa icon-size-fullscreen"></i></a></li>
+								</ul>
+							</div>
+						</div>	
+						<div class="collapse show" id="collapseExample">
+							<div class="body">							
+								<div class="row clearfix">
+									<div class="col-md-3 col-sm-6">
+										<div class="input-group input-group-sm mb-2">
+											<div class="input-group-prepend">
+												<label class="input-group-text" id="inputGroup-sizing-sm">Empresa</label>
+											</div>
+											<select class="custom-select" id="inputGroup-sizing-sm" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+												<option>Todos...</option>
+												<option>Empresa 1</option>
+												<option>Empresa 2</option>
+												<option>Empresa 3</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-6">
+										<div class="input-group input-group-sm mb-2">
+											<div class="input-group-prepend">
+												<label class="input-group-text" id="inputGroup-sizing-sm">Sede</label>
+											</div>
+											<select class="custom-select" id="inputGroup-sizing-sm" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+												<option>Todos...</option>
+												<option>Sede 1</option>
+												<option>Sede 2</option>
+												<option>Sede 3</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-6">
+									   <div class="input-group input-group-sm mb-2">
+											<div class="input-group-prepend">
+												<label class="input-group-text" id="inputGroup-sizing-sm">Grupo de Venta</label>
+											</div>
+											<select class="custom-select" id="inputGroup-sizing-sm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" >
+												<option>Todos...</option>
+												<option>Grupo 1</option>
+												<option>Grupo 2</option>
+												<option>Grupo 3</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-6">
+									   <div class="input-group input-group-sm mb-2">
+											<div class="input-group-prepend">
+												<label class="input-group-text" id="inputGroup-sizing-sm">Vendedor</label>
+											</div>
+											<select class="custom-select" id="inputGroup-sizing-sm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" >
+												<option>Todos...</option>
+												<option>Vendedor 1</option>
+												<option>Vendedor 2</option>
+												<option>Vendedor 3</option>
+												<option>Vendedor 4</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-6">
+										<div class="input-group input-group-sm mb-2">
+											<div class="input-group-prepend">
+												<label class="input-group-text" id="inputGroup-sizing-sm">Tipo Prospecto </label>
+											</div>
+											<select class="custom-select" id="inputGroup-sizing-sm" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+												<option>Todos...</option>
+												<option>Cliente nuevo</option>
+												<option>Cliente existente</option>
+											</select>
+										</div>
+									</div>										
+									<div class="col-md-3 col-sm-6">
+									   <div class="input-group input-group-sm mb-2">
+											<div class="input-group-prepend">
+												<label class="input-group-text" id="inputGroup-sizing-sm">Origen</label>
+											</div>
+											<select class="custom-select" id="inputGroup-sizing-sm" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+												<option>Todos...</option>
+												<option> REFERIDO</option>
+												<option> FACEBOOK</option>
+												<option> PÁGINA WEB</option>
+												<option> PROSPECCIÓN PROPIA</option>
+											</select>
+										</div>
+									</div>	
+									<div class="col-md-2 col-sm-6">
+									   <div class="input-group input-group-sm mb-2">
+											<div class="input-group-prepend">
+												<label class="input-group-text" id="inputGroup-sizing-sm">Blindaje</label>
+											</div>
+											<select class="custom-select" id="inputGroup-sizing-sm" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+												<option>Todos...</option>
+												<option>Activo</option>
+												<option>Inactivo</option>
+											</select>
+										</div>
+									</div>	
+									<div class="col-md-2 col-sm-6">
+										<div class="input-group input-group-sm mb-2">
+											<div class="input-group-prepend">
+												<label class="input-group-text" id="inputGroup-sizing-sm">Año</label>
+											</div>
+											<select class="custom-select" id="inputGroup-sizing-sm" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+												<option>Todos...</option>
+												<option selected>2026</option>
+												<option>2025 </option>
+												<option>2024 </option>
+											</select>
+										</div>
+									</div>									
+									<div class="col-md-2 col-sm-6">
+										<div class="input-group input-group-sm mb-2">
+											<div class="input-group-prepend" style="width:100%">
+												<label class="input-group-text" id="inputGroup-sizing-sm">Período</label>
+												<select class="multiselect multiselect-custom" id="cboPeriodo" aria-label="Small" aria-describedby="inputGroup-sizing-sm" multiple="multiple" style="width: 100%">
+												</select>
+											</div>											
+										</div>
+									</div>	
+									<div class="col-md-12 text-right">
+										<button id="btnBuscarEvento" type="button" class="btn btn-erp"><i class="fa fa-search"></i> Buscar</button>
+									</div>											
+								</div>
+							</div>							
+						</div>	
+						<div class="body">
+							<div class="row clearfix">
+								<div class="col-lg-6 col-md-12 col-sm-12"> 
+									<div class="shadow-lg p-3 mb-3 bg-white rounded">
+										<figure class="highcharts-figure">
+											<div id="container"></div>
+										</figure>
+									</div>
+								</div>										
+								<div class="col-lg-6 col-md-12 col-sm-12">
+									<div class="shadow-lg p-3 mb-3 bg-white rounded">
+										<figure class="highcharts-figure"> <!-- prospecto por equipo-->
+											<div id="container2"></div>
+										</figure>
+									</div>										
+								</div>								
+							</div>	
+							<div class="row clearfix">
+								<div class="col-lg-6 col-md-6 col-sm-12">
+									<div class="shadow-lg p-3 mb-3 bg-white rounded">
+										<figure class="highcharts-figure"> <!-- seguimiento a equipos -->
+											<div id="container6" ></div>
+										</figure>
+									</div>									
+								</div>
+								
+								<div class="col-lg-6 col-md-6 col-sm-12">
+									<div class="shadow-lg p-3 mb-3 bg-white rounded">
+										<figure class="highcharts-figure"> <!-- seguimiento a consejeros -->
+											<div id="container5"></div>
+										</figure>
+									</div>									
+								</div>	
+							</div>									
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Javascript -->
+	<script src="assets/bundles/libscripts.bundle.js"></script>
+	<script src="assets/bundles/vendorscripts.bundle.js"></script>
+	<script src="assets/bundles/datatablescripts.bundle.js"></script>
+	<script src="assets/bundles/mainscripts.bundle.js"></script>
+
+	<script src="../assets/vendor/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script> <!-- Bootstrap Colorpicker Js -->
+	<script src="../assets/vendor/jquery-inputmask/jquery.inputmask.bundle.js"></script> <!-- Input Mask Plugin Js -->
+	<script src="../assets/vendor/jquery.maskedinput/jquery.maskedinput.min.js"></script>
+	<script src="../assets/vendor/multi-select/js/jquery.multi-select.js"></script> <!-- Multi Select Plugin Js -->
+	<script src="../assets/vendor/bootstrap-multiselect/bootstrap-multiselect.js"></script>
+	<script src="../assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+	<script src="../assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.js"></script> <!-- Bootstrap Tags Input Plugin Js -->
+	<script src="../assets/vendor/nouislider/nouislider.js"></script> <!-- noUISlider Plugin Js -->
+	<script src="../assets/vendor/sweetalert/sweetalert.min.js"></script> <!-- SweetAlert Plugin Js -->
+
+	<script src="assets/js/app.min.js" type="text/javascript"></script>
+	<script src="assets/js/pages/forms/advanced-form-elements.js"></script>
+
+	<script src="assets/js/pages/tables/jquery-datatable.js"></script>
+	<script src="assets/js/pages/ui/dialogs.js"></script>
+	<script src="assets/js/traduccion_tablas.js" type="text/javascript"></script>
+
+	<script src="assets/code/highcharts.js"></script>
+	<script src="assets/code/highcharts-3d.js"></script>
+	<script src="assets/code/modules/exporting.js"></script>
+	<script src="assets/code/modules/export-data.js"></script>
+	<script src="assets/code/modules/accessibility.js"></script>
+	<script src="assets/code/modules/heatmap.js"></script>
+	<script src="assets/code/modules/cylinder.js"></script>
+	<script src="assets/code/modules/funnel3d.js"></script>
+	
+	<script>
+		$(document).ready(function () {
+			ComboPeriodo("#cboPeriodo", 18)		
+			$("#TablaPerfiles").DataTable();
+		});
+
+		$("#notificaciones").on("click", function () {
+			$("#listaNotificaciones").show();
+		})
+
+		$("#main-content").on("click", function () {
+			$("#listaNotificaciones").hide();
+		})
+	</script>
+
+
+	<script type="text/javascript">
+		Highcharts.chart('container2', {
+
+			chart: {
+				type: 'pie',
+				options3d: {
+					enabled: true,
+					alpha: 45,
+					beta: 0
+				}
+			},
+			title: {
+				text: 'Prospectos por Origen'
+			},
+
+			accessibility: {
+				point: {
+					valueSuffix: '%'
+				}
+			},
+			tooltip: {
+				pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+			},
+			Labels: {
+				pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+			},
+			plotOptions: {
+
+				pie: {
+					allowPointSelect: true,
+					cursor: 'pointer',
+					depth: 35,
+					dataLabels: {
+						enabled: true,
+						format: '{point.name}'
+					}
+				}
+			},
+			series: [{
+				type: 'pie',
+				name: 'Porcentaje',
+				data: [
+					['FACEBOKK (17)', 17.0],
+					['REFERIDO (28)', 28.0],
+					['PÁGINA WEB (29)', 29.0],
+					['PROSPECCIÓN PROPIA (20)', 20.0],
+					['FUNERARIA (6)', 6.0]
+				]
+			}]
+		});
+	</script>
+
+	<script type="text/javascript">
+		var chart4 = Highcharts.chart('container5', {
+
+			chart: {
+				type: 'column'
+			},
+
+			title: {
+				text: 'Seguimiento a Vendedores'
+			},
+
+			legend: {
+				align: 'right',
+				verticalAlign: 'middle',
+				layout: 'vertical'
+			},
+
+			xAxis: {
+				categories: ['VENDEDOR 1', 'VENDEDOR 2', 'VENDEDOR 3', 'VENDEDOR 4'],
+				labels: {
+					x: -10
+				}
+			},
+			yAxis: {
+				allowDecimals: true,
+				title: {
+					text: ''
+				}
+			},
+			plotOptions: {
+				column: {
+					dataLabels: {
+						enabled: true
+					}
+				}
+			},
+			series: [{
+				name: 'TOTAL',
+				data: [36, 24, 79],
+				color: '#000000'
+			}, {
+				name: 'CONTACTO',
+				data: [24, 20, 68],
+				color: '#5B91EC'
+			},{
+				name: 'PRESENTACIÓN',
+				data: [2, 1, 4],
+				color: '#F46100'
+			}, {
+				name: 'EN NEGOCIACION',
+				data: [10, 3, 7],
+				color: '#5CB85C'
+			}],
+
+			responsive: {
+				rules: [{
+					condition: {
+						maxWidth: 500
+					},
+					chartOptions: {
+						legend: {
+							align: 'center',
+							verticalAlign: 'bottom',
+							layout: 'horizontal'
+						},
+						yAxis: {
+							labels: {
+								align: 'left',
+								x: 0,
+								y: -5
+							},
+							title: {
+								text: null
+							}
+						},
+						subtitle: {
+							text: null
+						},
+						credits: {
+							enabled: false
+						}
+					}
+				}]
+			}
+		});
+
+		var hc4 = true;
+
+		$(".btn-toggle-fullwidth").click(function () {
+
+			if (hc4) {
+				chart4.setSize(400);
+				hc4 = false;
+			} else {
+				chart4.setSize(500);
+				hc4 = true;
+			}
+		})
+	</script>
+
+	<script type="text/javascript">
+		var chart5 = Highcharts.chart('container6', {
+
+			chart: {
+				type: 'column'
+			},
+
+			title: {
+				text: 'Seguimiento a Grupos de Venta'
+			},
+
+			legend: {
+				align: 'right',
+				verticalAlign: 'middle',
+				layout: 'vertical'
+			},
+
+			xAxis: {
+				categories: ['GRUPO 1', 'GRUPO 2', 'GRUPO 3'],
+				labels: {
+					x: -10
+				}
+			},
+			yAxis: {
+				allowDecimals: true,
+				title: {
+					text: ''
+				}
+			},
+			plotOptions: {
+				column: {
+					dataLabels: {
+						enabled: true
+					}
+				}
+			},
+			series: [{
+				name: 'TOTAL',
+				data: [36, 24, 79],
+				color: '#000000'
+			}, {
+				name: 'CONTACTO',
+				data: [24, 20, 68],
+				color: '#5B91EC'
+			},{
+				name: 'PRESENTACIÓN',
+				data: [2, 1, 4],
+				color: '#F46100'
+			}, {
+				name: 'EN NEGOCIACIÓN',
+				data: [10, 3, 7],
+				color: '#5CB85C'
+			}],
+
+			responsive: {
+				rules: [{
+					condition: {
+						maxWidth: 500
+					},
+					chartOptions: {
+						legend: {
+							align: 'center',
+							verticalAlign: 'bottom',
+							layout: 'horizontal'
+						},
+						yAxis: {
+							labels: {
+								align: 'left',
+								x: 0,
+								y: -5
+							},
+							title: {
+								text: null
+							}
+						},
+						subtitle: {
+							text: null
+						},
+						credits: {
+							enabled: false
+						}
+					}
+				}]
+			}
+		});
+
+		var hc5 = true;
+
+		$(".btn-toggle-fullwidth").click(function () {
+
+			if (hc5) {
+				chart5.setSize(400);
+				hc5 = false;
+			} else {
+				chart5.setSize(500);
+				hc5 = true;
+			}
+		})
+
+	</script>
+
+	<script type="text/javascript">
+	// Set up the chart
+	Highcharts.chart('container', {
+		chart: {
+			type: 'funnel3d',
+			options3d: {
+				enabled: true,
+				alpha: 10,
+				depth: 50,
+				viewDistance: 50
+			}
+		},
+		title: {
+			text: 'Embudo de Ventas'
+		},
+		accessibility: {
+			screenReaderSection: {
+				beforeChartFormat: '<{headingTagName}>{chartTitle}</{headingTagName}><div>{typeDescription}</div><div>{chartSubtitle}</div><div>{chartLongdesc}</div>'
+			}
+		},
+		plotOptions: {
+			series: {
+				dataLabels: {
+					enabled: true,
+					format: '<b>{point.name}</b> ({point.y:,.0f})',
+					allowOverlap: true,
+					y: 10
+				},
+				neckWidth: '30%',
+				neckHeight: '25%',
+				width: '80%',
+				height: '80%'
+			}
+		},
+		series: [{
+			name: 'Prospectos',
+			data: [
+				['Contacto', 15654],
+				['Presentación', 4064],
+				['Propeusta Entregada', 1987],
+				['En Negociación', 976],
+				['Cliente Ganado', 846]
+			]
+		}]
+	});
+		</script>
+
+	<script type="text/javascript">
+
+	function ComboPeriodo(componente, seleccionado = null) {												
+        [
+            { Id: "1", Text: "2026-01" },
+            { Id: "2", Text: "2026-02" },	
+            { Id: "3", Text: "2026-03" },
+			{ Id: "4", Text: "2026-04" }	
+           
+        ].forEach((value, index) => {
+            $(componente).append(`<option value="${value.Id}">${value.Text}</option>`);
+        })
+
+        IniciarMultiSelect(componente, seleccionado);
+
+    }
+
+function IniciarMultiSelect(componente, seleccionado = null) {
+	
+    $(componente).multiselect('destroy');
+
+    $(componente).multiselect({
+        selectAllText: 'Todos...',
+        includeSelectAllOption: true,
+        selectAllValue: -1,
+        nonSelectedText: "Ninguno...",
+        nSelectedText: 'seleccionada',
+        allSelectedText: 'Todos seleccionados',
+    }).multiselect("selectAll", true).multiselect('updateButtonText');
+
+    $(".multiselect").parent(".btn-group").css("width", "100%");
+    $(".multiselect").parent(".multiselect-native-select").css("width", "100%");
+    $(".multiselect-container.dropdown-menu").css("width", "100%");
+    $(".multiselect-container.dropdown-menu").css("width", "100%");
+    $(".multiselect-native-select").css("width", "100%");
+
+    if (seleccionado != null) {
+        $(componente).multiselect('select', seleccionado.split(",")).multiselect('updateButtonText');
+    } else {
+        $(componente).multiselect("selectAll", false).multiselect('updateButtonText');
+    }
+
+}
+
+function ConsultaDni() {
+
+    var cdni= $("#txtdni").val();
+  
+    $.ajax({
+        type: 'GET',
+        url: `https://dniruc.apisperu.com/api/v1/dni/${cdni}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IndlYmRlc2luZ2NwQGdtYWlsLmNvbSJ9.qFn9y_KTl7UqHWIGf-0DdyBZ22LsOzlAjJSgz9TS_Ew`,
+        contentType: "application/json; charset=utf-8",
+        async: true,
+        cache: false,
+        beforeSend: function () {
+           
+        },
+        success: function (response) {
+
+            console.log(response)
+            $("#txtNombres").val(response.nombres);
+            $("#txtApellidoPaterno").val(response.apellidoPaterno);
+            $("#txtApellidoMaterno").val(response.apellidoMaterno);
+
+        },
+        error: function (xhr, status, error) {
+        },
+        complete: function () {
+        }
+    });
+
+}
+   
+</script>
+
+</body>
+</html>

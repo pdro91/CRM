@@ -1,0 +1,683 @@
+.fw-formulario {				/* aplicado a la tabla que contiene a todas las otras */
+	background-color: white;
+	font-family: sans-serif;
+	font-size: 8pt;
+
+	text-align: left;
+}
+
+/*
+ Para que cuando se muestren secciones ocultas, la tabla interior no muesre doble margen 
+*/
+table.fw-seccionFormulario table {
+    margin: 0;
+}
+/*
+ Para que cuando se muestren secciones ocultas no se solapen 
+*/
+table.fw-seccionFormulario {
+    margin: 10px;
+}
+
+.fw-seccionFormulario {			/* aplicado a una tabla que representa una seccion dentro del formulario */
+	background-color: white;
+	font-family: sans-serif;
+	font-size: 8pt;
+
+	border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+.fw-seccionFormularioDerecha {			/* aplicado a una tabla que representa una seccion dentro del formulario */
+	background-color: white;
+	font-family: sans-serif;
+	font-size: 8pt;
+
+	border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    margin-left: 260px;
+}
+
+.fw-seccionFormularioContrib {			/* aplicado a una tabla que representa una seccion dentro del formulario */
+	background-color: white;
+	font-family: sans-serif;
+	font-size: 8pt;
+
+	border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    
+    width: 700px;
+    margin-left: 80px;
+}
+
+.fc-seccionFormularioContrib {			/* aplicado a una tabla que representa una seccion dentro del formulario */
+	background-color: white;
+	font-family: sans-serif;
+	font-size: 8pt;
+    width: 700px;
+}
+
+.fw-seccionFormularioContacto {			/* aplicado a una tabla que representa una seccion dentro del formulario */
+	background-color: white;
+	font-family: sans-serif;
+	font-size: 8pt;
+
+	border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    
+    width: 650px;
+    margin-left: 130px;
+}
+
+.fw-tablaFormulario { /* aplicado a una subdivision dentro de una seccion */
+	background-color: #FFEECC;
+	font-family: sans-serif;
+	font-size: 8pt;
+	border-style: none;
+}
+
+.fw-tablaFormularioNoBorder, .fw-tablaFormularioNoBorder div { /* aplicado a una subdivision dentro de una seccion */
+	background-color: #FFEECC;
+	font-family: sans-serif;
+	font-size: 8pt;
+	border-style: hidden;
+}
+
+.fw-tablaFormularioDerecha  {
+	background-color: white;
+	font-family: sans-serif;
+	font-size: 8pt;
+	border-style: none;
+    margin-left: 50%;
+}
+
+.fw-tablaFormularioDerechaDevolucion  {
+	background-color: white;
+	font-family: sans-serif;
+	font-size: 8pt;
+	border-style: none;
+    margin-left: 400px;
+}
+
+.fw-tablaFormularioDerechaContrib {	
+	background-color: white;
+	font-family: sans-serif;
+	font-size: 8pt;
+	border-style: none;
+}
+
+.fw-tablaFormularioDerechaContacto {	
+	background-color: white;
+	font-family: sans-serif;
+	font-size: 8pt;
+	border-style: none;
+}
+
+.fw-filaFormulario {
+}
+
+.fw-filaFormularioNoBorder, .fw-filaFormularioNoBorder div {
+	border_style: hidden;
+}
+
+.fw-numeroLinea {	/* aplicado a un td */
+	font-family: sans-serif;
+	font-size: 8pt;
+
+	border-style: solid;
+    border-color: silver;
+    border-width: 1px;
+    
+    width: 8px;
+    text-align: center;
+}
+
+.fw-numeroLinea div {	/* aplicado a un td */
+	font-family: sans-serif;
+	font-size: 8pt;
+
+	border-style: none;
+    
+    width: 10px;
+    text-align: center;
+}
+
+.fw-tituloGrupo {	/* aplicado a un td */
+	font-family: sans-serif;
+	font-size: 8pt;
+	
+	background-color: #FFEECC;
+	font-weight: bold;
+
+	border-style: solid;
+    border-color: silver;
+    border-width: 1px;
+    
+    text-align: center;
+}
+
+.fw-tituloGrupoNoBorder, .fw-tituloGrupoNoBorder div {	/* aplicado a un td */
+	font-family: sans-serif;
+	font-size: 8pt;
+	
+	background-color: #FFEECC;
+	font-weight: bold;
+
+	border-style: hidden;
+
+	text-align: center;
+	vertical-align: middle;
+}
+
+.fw-tituloGrupo div {	/* aplicado a un td */
+	font-family: sans-serif;
+	font-size: 8pt;
+	
+	background-color: #FFEECC;
+	font-weight: bold;
+
+	border-style: none;
+
+	text-align: center;
+}
+
+.fw-tituloGrupoIzq {	/* aplicado a un td */
+	font-family: sans-serif;
+	font-size: 8pt;
+	
+	background-color: #FFEECC;
+	font-weight: bold;
+
+	border-style: solid;
+    border-color: silver;
+    border-width: 1px;
+    
+    text-align: left;
+}
+
+.fw-tituloGrupoIzqNoBorder, .fw-tituloGrupoIzqNoBorder div {	/* aplicado a un td */
+	font-family: sans-serif;
+	font-size: 8pt;
+	
+	background-color: #FFEECC;
+	font-weight: bold;
+
+	border-style: hidden;
+	
+    text-align: left;
+}
+
+.fw-subTituloGrupoIzq {	/* aplicado a un td */
+	font-family: sans-serif;
+	font-size: 8pt;
+	
+	background-color: #FFEECC;
+
+	border-style: solid;
+    border-color: silver;
+    border-width: 1px;
+    
+    text-align: left;
+}
+
+.fw-tituloGrupoIzqAnchoFijo, .fw-tituloGrupoIzqAnchoFijo div {	/* aplicado a un td */
+	font-family: sans-serif;
+	font-size: 8pt;
+	
+	background-color: #FFEECC;
+	border-style: hidden;
+    text-align: left;
+    
+    width: 390px;
+}
+
+.fw-tituloGrupoIzq div {	/* aplicado a un td */
+	font-family: sans-serif;
+	font-size: 8pt;
+	
+	background-color: #FFEECC;
+	font-weight: bold;
+
+	border-style: none;
+    
+    text-align: left;
+}
+
+.fw-codigoCampo {	/* aplicado a un td */
+	font-family: sans-serif;
+	font-size: 8pt;
+
+	background-color: #E3E3E3;
+
+	border-style: solid;
+    border-color: silver;
+    border-width: 1px;
+    
+    width: 22px;
+    text-align: center;
+}
+
+
+.fc-codigoCampo {	/* aplicado a un td */
+	font-family: sans-serif;
+	font-size: 8pt;
+
+	background-color: #E3E3E3;
+
+	border-style: solid;
+    border-color: silver;
+    border-width: 1px;
+    
+    text-align: left;
+}
+.fw-codigoCampo div {	/* aplicado a un td */
+	font-family: sans-serif;
+	font-size: 8pt;
+
+	background-color: #E3E3E3;
+
+	border-style: none;
+    
+    width: 22px;
+    text-align: center;
+}
+
+.fw-descripcionCampo {	/* aplicado a un td */
+	font-family: sans-serif;
+	font-size: 8pt;
+	
+	background-color: #FFEECC;
+
+	border-style: solid;
+    border-color: silver;
+    border-width: 1px;
+    
+    padding: 3px;
+}
+
+.fw-descripcionCampoNoBorder, .fw-descripcionCampoNoBorder div {	/* aplicado a un td */
+	font-family: sans-serif;
+	font-size: 8pt;
+	
+	background-color: #FFEECC;
+
+	border-style: hidden;
+}
+
+.fw-descripcionCampo div {
+	font-family: sans-serif;
+	font-size: 8pt;
+	
+	background-color: #FFEECC;
+
+	border-style: none;
+}
+
+.fw-descripcionCampoCenter {	/* aplicado a un td */
+	font-family: sans-serif;
+	font-size: 8pt;
+	
+	background-color: #FFEECC;
+
+	border-style: solid;
+    border-color: silver;
+    border-width: 1px;
+    
+    text-align: center;
+}
+
+.fw-descripcionCampoCenter div {
+	font-family: sans-serif;
+	font-size: 8pt;
+	
+	background-color: #FFEECC;
+
+	border-style: none;
+
+    text-align: center;
+}
+
+.fw-valorCampoNoBorder {	/* aplicado a un td */
+	background-color: white;
+	font-family: sans-serif;
+	font-size: 8pt;	
+
+	text-align: left;
+	border-style: hidden;
+}
+
+.fw-valorCampoNoBorderCenter {	/* aplicado a un td */
+	background-color: white;
+	font-family: sans-serif;
+	font-size: 8pt;	
+
+	border-style: hidden;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.fw-valorCampoNoBorderRight {	/* aplicado a un td */
+	background-color: white;
+	font-family: sans-serif;
+	font-size: 8pt;	
+
+	border-style: hidden;
+	text-align: right;
+	vertical-align: middle;
+}
+
+.fw-valorCampo {	/* aplicado a un td */
+	background-color: white;
+	font-family: sans-serif;
+	font-size: 8pt;	
+
+	border-style: solid;
+    border-color: silver;
+    border-width: 1px;
+}
+
+.fw-valorCampoCenter{	/* aplicado a un td */
+	background-color: white;
+	font-family: sans-serif;
+	font-size: 8pt;	
+
+	border-style: solid;
+    border-color: silver;
+    border-width: 1px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.fw-valorCampoRight{	/* aplicado a un td */
+	background-color: white;
+	font-family: sans-serif;
+	font-size: 8pt;	
+
+	border-style: solid;
+    border-color: silver;
+    border-width: 1px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.fw-valorCampoAnchoImagen {	/* aplicado a un td */
+	background-color: white;
+	font-family: sans-serif;
+	font-size: 8pt;	
+	text-align: center;
+	border-style: solid;
+    border-color: silver;
+    border-width: 1px;
+    
+    width: 390px;
+}
+
+.fw-valorCampo span, .fw-valorCampo input, .fw-valorCampo select {	/* aplicado a un td */
+	background-color: white;
+	font-family: sans-serif;
+	font-size: 8pt;	
+
+	border-style: none;
+}
+
+.fw-valorCampo .fw-campoDestacado {
+	background-color: #FFAAAA;
+	font-family: sans-serif;
+	font-size: 8pt;	
+
+	border-style: solid;
+    border-color: red;
+    border-width: 1px;
+}
+
+
+.fw-valorCampo .fw-valorCampo-readonly {
+    color: #8B8B8B;     /* "color" debiera ir igual a .fw-valorCampoOculto */
+}
+
+
+/******************************************************************************/
+/* Se "oculta" un campo cambiando su color de fondo (aplicado a un textbox y un TD). 
+   Usado para dar una señal visual mas clara de que no es editable. */
+.fw-valorCampoOculto { /* aplicado sobre el textbox */
+    background-color: #EEEEEE;  /* aplico un color gris muy claro */
+    font-family: sans-serif;
+    font-size: 8pt; 
+    
+    color: #8B8B8B;     /* el texto debe ir gris tal cual en .fw-valorCampo-readonly */
+    border-style: none;
+    boder-color: #EEEEEE;
+    border-width: 1px;
+
+    overflow: visible;
+    word-wrap: brake-word;    
+}
+
+.fw-campoOculto { /* aplicado sobre un TD con textbox de estilo "fw-valorCampoOculto" */
+    background-color: #EEEEEE;  /* aplico un color gris muy claro */
+
+    border-style: solid;
+    border-color: silver;
+    border-width: 1px;
+}
+
+.fw-campoOculto .fw-campoDestacado {   /* para destacar campos "ocultos" en caso de errores de validacion por ej. */ 
+    background-color: #FFAAAA;
+    font-family: sans-serif;
+    font-size: 8pt; 
+
+    border-style: solid;
+    border-color: red;
+    border-width: 1px;
+}
+/******************************************************************************/
+
+
+.fw-separador {
+	background-color: white;
+	border-style: none;
+}
+
+.fw-tituloVertical {	/* aplicado a un td */
+	font-family: sans-serif;
+	font-size: 8pt;
+	
+	background-color: #FFEECC;
+	font-weight: bold;
+
+	border-style: solid;
+    border-color: silver;
+    border-width: 1px;
+    
+    width: 30px;
+    text-align: center;
+	writing-mode: tb-rl;
+	filter: flipv() fliph(); /* Explorer */
+	transform: rotate(270deg);
+    -webkit-transform: rotate(270deg); /* Safari and Chrome */
+    -o-transform: rotate(270deg); /* Opera */
+    -moz-transform: rotate(270deg); /* Firefox */
+	
+}
+
+.fw-tituloAnchoFijo {	/* aplicado a un td */
+	font-family: sans-serif;
+	font-size: 8pt;
+	
+	background-color: #FFEECC;
+	font-weight: bold;
+
+	border-style: solid;
+    border-color: silver;
+    border-width: 1px;
+    
+    width: 152px;
+    text-align: center;
+}
+
+.fw-subTituloAnchoFijo {	/* aplicado a un td */
+	font-family: sans-serif;
+	font-size: 8pt;
+	
+	background-color: #FFEECC;
+	font-weight: bold;
+
+	border-style: solid;
+    border-color: silver;
+    border-width: 1px;
+    
+    width: 132px;
+    text-align: center;
+}
+
+.fw-descripcionCampoAnchoFijo {	/* aplicado a un td */
+	font-family: sans-serif;
+	font-size: 8pt;
+	
+	background-color: #FFEECC;
+
+	border-style: solid;
+    border-color: silver;
+    border-width: 1px;
+    
+    width: 720px;
+}
+
+.fw-campoChicoAnchoFijo {	/* aplicado a un td */
+	font-family: sans-serif;
+	font-size: 8pt;
+	
+	background-color: #FFEECC;
+
+	border-style: solid;
+    border-color: silver;
+    border-width: 1px;
+    
+    width: 220px;
+}
+
+.fw-totalizadorCampoAnchoFijo {	/* aplicado a un td */
+	font-family: sans-serif;
+	font-size: 8pt;
+	
+	background-color: #FFEECC;
+	font-weight: bold;
+
+	border-style: solid;
+    border-color: silver;
+    border-width: 1px;
+    
+    width: 293px;
+    text-align: left;
+}
+
+.fw-mesAnchoFijo, .fw-mesAnchoFijo div {	/* aplicado a un td */
+	font-family: sans-serif;
+	font-size: 8pt;
+	
+	background-color: #FFEECC;
+
+	border-style: solid;
+    border-color: silver;
+    border-width: 1px;
+    
+    width: 60px;
+}
+
+.fw-valorCampoDV {	/* aplicado a un td */
+	background-color: white;
+	font-family: sans-serif;
+	font-size: 8pt;	
+
+	border-style: solid;
+    border-color: silver;
+    border-width: 1px;
+    
+    width: 20px;
+}
+
+.fw-valorCampoAnchoFijo, .fw-valorCampoAnchoFijo div {	/* aplicado a un td */
+	background-color: white;
+	font-family: sans-serif;
+	font-size: 8pt;	
+
+	border-style: hidden;
+    /*border-color: silver;
+    border-width: 1px;*/
+    
+    width: 100px;
+}
+
+
+.fw-valorCeldaCamposTop {    /* aplicado a un td que define una celda vacia (que contendra una tabla con varios campos inyectados por otro widget), con alineacion vertical "top" de la celda. */
+    background-color: white;
+    font-family: sans-serif;
+    font-size: 8pt; 
+    border-style: solid;
+    border-color: silver;
+    border-width: 1px;
+    vertical-align: top;
+}
+
+.fw-campoSeleccionado {
+	background-color: #E3E3E3;
+	cursor: hand;
+}
+
+.fw-campoApuntado {
+	background-color: #EEEEEE;
+	cursor: hand;
+}
+
+.fw-campoEliminado {
+    background-color: #AAAAAA;
+    text-decoration:line-through;
+    cursor: hand;
+    outline-style: solid; 
+}
+
+
+/* ***************************************************************************
+ * Tabbed Panel DDJJ
+ */
+.fw-ingresoDDJJ-tabPanel, .fw-ingresoDDJJ-tabPanel td { /* El TabPanel widget */
+/*	background-color: #F0E68C; */
+}
+
+.fw-ingresoDDJJ-tabPanel .gwt-TabBar { /* La parte superior del TabPanel con sus lenguetas */
+}
+
+.fw-ingresoDDJJ-tabPanel table.gwt-TabBar div.gwt-TabBarFirst { /* La primera lengueta (vacía) */
+}
+
+.fw-ingresoDDJJ-tabPanel table.gwt-TabBar div.gwt-TabBarItem { /* Las lenguetas definidas por el código */
+	border: 1px solid black;
+	font-size: 8pt; 
+    background-color: #E3E3E3;
+	cursor: hand;
+}
+
+.fw-ingresoDDJJ-tabPanel table.gwt-TabBar div.gwt-TabBarItem-selected { /* La lengueta seleccionada */
+	border: 2px solid black;
+	font-weight: bold;
+    background-color: #B6B6B6;
+}
+
+.fw-ingresoDDJJ-tabPanel, .fw-ingresoDDJJ-tabPanel td { /* El TabPanel widget */
+}
+
+.fw-ingresoDDJJ-tabPanel .gwt-TabBar { /* La parte superior del TabPanel con sus lenguetas */
+}
+
+.fw-ingresoDDJJ-tabPanel table.gwt-TabBar div.gwt-TabBarFirst { /* La primera lengueta (vacía) */
+}
+
+.fw-ingresoDDJJ-tabPanel table.gwt-TabBar div.gwt-TabBarItem { /* Las lenguetas definidas por el código */
+	padding: 5px;
+	margin-right: 5px;
+	margin-top: 5px;
+}

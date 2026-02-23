@@ -1,0 +1,93 @@
+.wizard>.steps>ul>li::after{
+    content: " ";
+    display: block;
+    width: 0;
+    position: relative;
+    height: 0;
+    border-top: 25px solid #ffffff;
+    border-bottom: 25px solid #ffffff;
+    top: 50%;
+    margin-top: -50px;
+    z-index: 2;
+    float: right;
+    border-left: 30px solid  #3b4466 ;
+    z-index: 2;
+    margin-right: 1px;
+}
+
+.wizard>.steps>ul>li::before{
+    content: " ";
+    display: block;
+    width: 0;
+    position: relative;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    top: 50px;
+    margin-top: -50px;
+    left: 0%;
+    z-index: 2;
+    border-left: 30px solid #ffffff;
+    margin-left: 0px;
+}
+
+.wizard>.steps  a{
+  text-align: center;
+  color: #333333 ;
+}
+.wizard>.steps .disabled a{
+  color:#333333;
+}
+
+.wizard>.steps .current a{
+  background: #3b4466;
+  opacity: 1;
+}
+
+ .wizard>.steps .done a{
+    background: #D7DDF5;
+    color: #333333;
+    opacity: 1;
+ }
+ .wizard>.steps .done a:hover{
+    background: #D7DDF5;
+    color: #333333;
+    font-weight: bold;
+    opacity: 1;
+ }
+.wizard>.steps>ul .disabled::after{
+  border-left: 30px solid #f0f0f0 ;
+}
+.wizard>.steps>ul .first::before{
+  border-left: 30px solid #3b4466;
+}
+.wizard>.steps>ul .last::after{
+    border-top: 0px ;
+    border-bottom: 0px ;
+}
+.wizard>.steps>ul .done::before{
+  border-left: 30px solid #D7DDF5;
+}
+.wizard>.steps>ul .done::after{
+  border-left: 30px solid #D7DDF5 ;
+}
+.wizard>.steps .current a:hover{
+    background: #3b4466 !important;
+    font-weight: bold;
+    opacity: 1;
+  }
+ .wizard>.steps .done a:hover {
+    background: #D7DDF5 !important;
+    font-weight: bold;
+    opacity: 1;
+  }
+ 
+.wizard .number{
+      background: #ffffff;
+    color: #000000;
+    padding: 10px 12px;
+    border-radius: 50px;
+}
+.wizard>.actions a{
+   background: #3b4466;
+}

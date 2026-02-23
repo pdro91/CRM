@@ -1,0 +1,1176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>{{EMPRESA}} - Actividades Comerciales</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="description" content="Lucid Bootstrap 4x Admin Template">
+	<meta name="author" content="WrapTheme, design by: ThemeMakker.com">
+
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/vendor/font-awesome/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="../assets/vendor/jquery-datatable/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" href="../assets/vendor/jquery-datatable/fixedeader/dataTables.fixedcolumns.bootstrap4.min.css">
+	<link rel="stylesheet" href="../assets/vendor/jquery-datatable/fixedeader/dataTables.fixedheader.bootstrap4.min.css">
+	<link rel="stylesheet" href="../assets/vendor/sweetalert/sweetalert.css"/>	
+	<link rel="stylesheet" href="../assets/vendor/bootstrap-multiselect/bootstrap-multiselect.css"/>
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/color_skins.css">
+	<!-- Portlets -->
+	<link rel="stylesheet" href="assets/css/portlet.css">
+	<link rel="stylesheet" href="assets/css/style_edit.css">
+	<style>
+        .multiselect-container {
+			overflow-y: scroll !important ;
+			height: 250px !important;
+        }
+	</style>
+	
+</head>
+<body class="theme-erp layout-fullwidth">
+
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="m-t-30"><img src="../assets/images/logo1.png" width="48" height="48" ></div>
+        <p>Espere...</p>        
+    </div>
+</div>
+<!-- Overlay For Sidebars -->
+
+<div id="wrapper">
+
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-btn">
+                <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
+            </div>
+
+            <div class="navbar-brand">
+                <a href="index.html"><img src="../assets/images/logo1.png" alt="Logo" class="img-responsive logo"></a>                 
+            </div>
+			<a href="javascript:void(0);" class="btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-circle-right fa-2x"></i></a>
+            
+            <div class="navbar-right">
+                <div id="navbar-menu" class="notificaciones">
+					<ul class="nav navbar-nav">                                                
+						<li class="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle icon-menu" id="notificaciones">
+                                <i class="icon-bell"></i>
+                                <span class="notification-dot"></span>
+                            </a>
+							<ul id="listaNotificaciones" class="dropdown-menu notifications shake">
+								<div class="col-md-12 col-lg-12 " style="padding: 0px;">
+									<div class="card">
+										<div class="body sidebar">
+											<ul class="nav nav-tabs nav-justified">
+												<li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#todas"><i class="fa fa-th"></i><br /><small> Todas</small></a></li>
+												<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#alerta"><i class="icon-info"></i> <br /> <small>Alerta</small></a></li>
+												<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#calendario"><i class="fa fa-calendar"></i> <br /><small> Citas y Presentaciones</small></a></li>
+												<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#recordatorio"><i class="fa fa-exclamation-triangle"></i><br /><small>  Recordatorio</small></a></li>
+											</ul>
+											<div class="tab-content sidebar">
+												<div class="tab-pane sidebar show active" id="todas">
+													<ul class="notificaicones-list sidebar">
+														<li class="header"><strong>Tiene 4 nuevas notificaciones!</strong></li>
+														<li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="icon-info text-warning"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Campaign <strong>Holiday Sale</strong> is nearly reach budget limit.</p>
+																		<span class="timestamp">10:00 AM Today</span>
+																	</div>
+																</div>
+															</a>
+														</li>                               
+														<li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="icon-like text-success"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Your New Campaign <strong>Holiday Sale</strong> is approved.</p>
+																		<span class="timestamp">11:30 AM Today</span>
+																	</div>
+																</div>
+															</a>
+														</li>
+														 <li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="icon-pie-chart text-info"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Website visits from Twitter is 27% higher than last week.</p>
+																		<span class="timestamp">04:00 PM Today</span>
+																	</div>
+																</div>
+															</a>
+														</li>
+														<li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="icon-info text-danger"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Error on website analytics configurations</p>
+																		<span class="timestamp">Yesterday</span>
+																	</div>
+																</div>
+															</a>
+														</li>
+														<li class="footer"><a href="notificacion.html" class="more">Ver todas las notificaciones</a></li>
+													</ul>
+												</div>
+												<div class="tab-pane sidebar" id="alerta">
+													<ul class="notificaicones-list">
+														<li class="header"><strong>Tiene 4 nuevas notificaciones!</strong></li>
+														 <li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="fa fa-envelope text-info"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Website visits from Twitter is 27% higher than last week.</p>
+																		<span class="timestamp">04:00 PM Today</span>
+																	</div>
+																</div>
+															</a>
+														</li>
+														 <li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="fa fa-envelope text-info"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Website visits from Twitter is 27% higher than last week.</p>
+																		<span class="timestamp">04:00 PM Today</span>
+																	</div>
+																</div>
+															</a>
+														</li>
+														 <li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="fa fa-envelope text-info"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Website visits from Twitter is 27% higher than last week.</p>
+																		<span class="timestamp">04:00 PM Today</span>
+																	</div>
+																</div>
+															</a>
+														</li> 
+														<li class="footer"><a href="notificacion.html" class="more">Ver todas las notificaciones</a></li>
+													</ul>
+												</div>
+												<div class="tab-pane sidebar" id="calendario">
+												   <ul class="notificaicones-list">
+														<li class="header"><strong>Tiene 4 nuevas notificaciones!</strong></li>
+														<li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="fa fa-exclamation-triangle text-warning"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Campaign <strong>Holiday Sale</strong> is nearly reach budget limit.</p>
+																		<span class="timestamp">10:00 AM Today</span>
+																	</div>
+																</div>
+															</a>
+														</li> 
+														<li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="fa fa-exclamation-triangle text-warning"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Campaign <strong>Holiday Sale</strong> is nearly reach budget limit.</p>
+																		<span class="timestamp">10:00 AM Today</span>
+																	</div>
+																</div>
+															</a>
+														</li>    
+														<li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="fa fa-exclamation-triangle text-warning"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Campaign <strong>Holiday Sale</strong> is nearly reach budget limit.</p>
+																		<span class="timestamp">10:00 AM Today</span>
+																	</div>
+																</div>
+															</a>
+														</li>    
+														<li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="fa fa-exclamation-triangle text-warning"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Campaign <strong>Holiday Sale</strong> is nearly reach budget limit.</p>
+																		<span class="timestamp">10:00 AM Today</span>
+																	</div>
+																</div>
+															</a>
+														</li>       
+														<li class="footer"><a href="notificacion.html" class="more">Ver todas las notificaciones</a></li>
+													</ul>
+												</div>
+												<div class="tab-pane sidebar" id="recordatorio">
+													<ul class="notificaicones-list">
+														<li class="header"><strong>Tiene 4 nuevas notificaciones!</strong></li>
+														<li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="fa fa-flash text-danger"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Error on website analytics configurations</p>
+																		<span class="timestamp">Yesterday</span>
+																	</div>
+																</div>
+															</a>
+														</li>
+														<li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="fa fa-flash text-danger"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Error on website analytics configurations</p>
+																		<span class="timestamp">Yesterday</span>
+																	</div>
+																</div>
+															</a>
+														</li>
+														<li>
+															<a href="javascript:void(0);">
+																<div class="media">
+																	<div class="media-left">
+																		<label class="fancy-checkbox mb-0" title="Marcar como Atendida">
+																			<input type="checkbox" name="checkbox">
+																			<span> </span>
+																		</label>
+																	</div>																	
+																	<div class="media-left">
+																		<i class="fa fa-flash text-danger"></i>
+																	</div>
+																	<div class="media-body">
+																		<p class="text">Error on website analytics configurations</p>
+																		<span class="timestamp">Yesterday</span>
+																	</div>
+																</div>
+															</a>
+														</li>
+													 
+														<li class="footer"><a href="notificacion.html" class="more">Ver todas las notificaciones</a></li>
+													</ul>
+												</div>											
+											</div>
+										</div>
+									</div>
+								</div>
+							</ul>
+                        </li>						
+						<li><a href="#" class="icon-menu d-none d-sm-block rightbar_btn"><i class="fa fa-windows"></i><span class="blue"><strong> Administración</strong></span></a></li>
+						&nbsp;&nbsp;
+						<li><a href="page-login.html" class="icon-menu"><i class="icon-login"></i></a></li>                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="rightbar" class="sidebar rightbar">
+        <div class="sidebar-scroll">            
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">                
+                <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#mantenedores"><i class="icon-book-open" title="Mantenedores de Tablas"></i> Tablas</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#configuracion"><i class="icon-settings" title="Configuración"></i> Config.</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#faq"><i class="icon-question" title="FAQ"></i></a></li>                
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane animated fadeIn active" id="mantenedores">
+                    <nav class="sidebar-nav">
+                        <ul class="main-menu metismenu">
+                            <li>
+                                <a href="#comercial" class="has-arrow"><i class="fa fa-briefcase"></i><span>Comercial</span></a>
+                                <ul>
+                                    <li><a href="tablas_grupo_venta.html"><i class="icon-list"></i>Grupos de Venta</a></li>
+									<li><a href="tablas_tipo_comisionista.html"><i class="icon-list"></i>Tipo Comisionista</a></li>
+									<li><a href="tablas_acciones.html"><i class="icon-list"></i>Acciones</a></li>
+                                </ul>
+                            </li>							
+                        </ul>
+                    </nav>
+                </div>
+                <div class="tab-pane animated fadeIn" id="configuracion">
+                    <nav class="sidebar-nav">
+                        <ul class="main-menu metismenu">
+							<li><a href="config_perfiles.html"><i class="fa fa-sliders"></i><span>Perfiles</span></a></li>
+							<li><a href="config_usuarios.html"><i class="icon-users"></i><span>Usuarios</span></a></li>
+							<li><a href="config_empresas.html"><i class="fa fa-building"></i><span>Empresas</span></a></li>
+							<li><a href="config_sedes.html"><i class="fa fa-thumb-tack"></i><span>Sedes</span></a></li>
+							<li><a href="config_periodos.html"><i class="icon-list"></i><span>Periodos</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="tab-pane animated fadeIn" id="faq">
+                    <form>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" ><i class="icon-magnifier"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Search...">
+                        </div>
+                    </form>
+                    <ul class="list-unstyled question">
+                        <li class="menu-heading">HOW-TO</li>
+                        <li><a href="javascript:void(0);">How to Create Campaign</a></li>
+                        <li><a href="javascript:void(0);">Boost Your Sales</a></li>
+                        <li><a href="javascript:void(0);">Website Analytics</a></li>
+                        <li class="menu-heading">ACCOUNT</li>
+                        <li><a href="javascript:void(0);">Cearet New Account</a></li>
+                        <li><a href="javascript:void(0);">Change Password?</a></li>
+                        <li><a href="javascript:void(0);">Privacy &amp; Policy</a></li>
+                        <li class="menu-heading">BILLING</li>
+                        <li><a href="javascript:void(0);">Payment info</a></li>
+                        <li><a href="javascript:void(0);">Auto-Renewal</a></li>                        
+                        <li class="menu-button m-t-30">
+                            <a href="javascript:void(0);" class="btn btn-primary"><i class="icon-question"></i> Need Help?</a>
+                        </li>
+                    </ul>
+                </div>                
+            </div>          
+        </div>
+    </div>
+	
+    <div id="left-sidebar" class="sidebar mini-sidebar">
+        <div class="sidebar-scroll">
+            <div class="user-account">
+                <img src="../assets/images/user.png" class="rounded-circle user-photo" alt="Foto Usuario">
+                <div class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>Elí Vera Guevara</strong></a>  
+                    <ul class="dropdown-menu dropdown-menu-right account animated flipInY">
+                        <li><a href="page-profile2.html"><i class="icon-user"></i>Mi Perfil</a></li>
+                        <!--<li><a href="app-inbox.html"><i class="icon-envelope-open"></i>Messages</a></li>
+                        <li><a href="javascript:void(0);"><i class="icon-settings"></i>Configuración</a></li>-->
+                        <li class="divider"></li>
+                        <li><a href="page-login.html"><i class="icon-power"></i>Salir</a></li>
+                    </ul>
+					<span>Supervisor de Ventas</span>						
+                </div>
+            </div>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+                <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#modulos"><i class="fa fa-database"></i><b> Módulos</b></a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#reportes"><i class="fa fa-bar-chart-o"></i><b> Reportes</b></a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content p-l-0 p-r-0">
+                <div class="tab-pane animated fadeIn active" id="modulos">
+                    <nav class="sidebar-nav">
+                        <ul class="main-menu metismenu">
+                            <li><a href="index.html"><i class="fa fa-home"></i><span><b>Inicio</b></span></a></li>
+                            <li>
+                                <a href="#rrhh" class="has-arrow"><i class="fa fa-users"></i><span><b>Recursos Humanos</b></span></a>
+                                <ul>
+									<li><a href="rrhh_colaboradores.html">Gestión de Colaboradores</a></li>
+                                </ul>
+                            </li>								
+							<li class="active">
+                                <a href="#comercial" class="has-arrow"><i class="fa fa-briefcase"></i><span><b>Comercial</b></span></a>
+								<ul>
+									<li class="active">
+										<a href="#crm" class="has-arrow"><i class="fa fa-suitcase"></i><span>CRM</span></a>
+										<ul>
+											<li><a href="comercial_crm_prospectos.html">Prospectos</a></li>
+											<li class="active"><a href="comercial_crm_actividad_comercial.html">Actividades Comerciales</a></li>
+											<li><a href="comercial_crm_cotizaciones.html">Cotizaciones</a></li>
+										</ul>										
+									</li>
+									<li>
+										<a href="#ventas" class="has-arrow"><i class="fa fa-shopping-cart"></i><span>Gestión de Ventas</span></a>
+										<ul>
+											<li><a href="comercial_ventas_contratos.html">Contratos</a></li>
+											<li><a href="comercial_ventas_seguimiento_cobros.html">Seguimiento Cobros</a></li>
+										</ul>
+									</li>
+                                </ul>
+                            </li>																			
+                        </ul>
+                    </nav>
+                </div>
+                <div class="tab-pane animated fadeIn" id="reportes">
+                    <nav class="sidebar-nav">
+                        <ul class="main-menu metismenu">
+                          
+                        </ul>                        
+                    </nav>                    
+                </div>
+            </div>          
+        </div>
+    </div>
+
+    <div id="main-content">
+		<div class="container-fluid">
+			<div class="block-header">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 c_breadcrumbs">
+						<ul>
+							<li><a href="index.html"><i class="fa fa-home"></i></a></li>
+							<li><a href="javascript:void(0);">Comercial</a></li>
+							<li><a href="javascript:void(0);">CRM</a></li>
+							<li><b><a href="javascript:void(0);">Actividades Comerciales</a></b></li>
+						</ul>
+					</div>				
+				</div>
+			</div>		
+			<div class="row clearfix">
+				<div class="col-lg-12">
+					<div class="card planned_task portlet box sidebar">
+						<div class="header portlet-title">
+							<h2> Lista de Actividades Comerciales </h2>
+							<div class="tools">
+								<ul class="header-dropdown">
+									<li><a class="btn btn-erp" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample" title="Agregar filtros"><i class="fa fa-filter"></i> Filtrar</a></li>
+									<!--<li><a href="javascript:void(0);" class="btn btn-erp" data-toggle="modal" data-target="#add_evento" title="Agregar Evento"><i class="fa fa-plus"></i> Evento</a></li>  -->
+									<li>
+										<a id="btnGroupDrop1" href="javascript:void(0);" class="btn btn-erp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Exportación"><i class="fa fa-share"></i></a>
+										<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">       
+											<a href="javascript:;" data-action="0" class="tool-action text-white">
+												<i class="icon-printer"></i> Imprimir
+											</a>
+											<a href="javascript:;" data-action="1" class="tool-action text-white">
+												<i class="fa fa-copy"></i> Copiar
+											</a>
+											<a href="javascript:;" data-action="2" class="tool-action text-white">
+												<i class="fa fa-file-pdf-o"></i> PDF
+											</a>
+											<a href="javascript:;" data-action="3" class="tool-action text-white">
+												<i class="fa fa-file-excel-o"></i> Excel
+											</a>
+											<a href="javascript:;" data-action="4" class="tool-action text-white">
+												<i class="icon-cloud-upload"></i> CSV
+											</a>
+										</div>
+									</li>
+									<li><a href="" class="btn btn-erp fullscreen" title="Pantalla Completa"><i class="fa icon-size-fullscreen"></i></a></li>
+								</ul>									
+							</div>							
+						</div>
+						<div class="collapse show" id="collapseExample">
+							<div class="body">							
+								<div class="row clearfix">								
+									<div class="col-md-3 col-sm-6">
+										<div class="input-group input-group-sm mb-2">
+											<div class="input-group-prepend">
+												<label class="input-group-text" id="inputGroup-sizing-sm">Empresa</label>
+											</div>
+											<select class="custom-select" id="inputGroup-sizing-sm" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+												<option>Todos...</option>
+												<option>Empresa 1</option>
+												<option>Empresa 2</option>
+												<option>Empresa 3</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-6">
+										<div class="input-group input-group-sm mb-2">
+											<div class="input-group-prepend">
+												<label class="input-group-text" id="inputGroup-sizing-sm">Sede</label>
+											</div>
+											<select class="custom-select" id="inputGroup-sizing-sm" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+												<option>Todos...</option>
+												<option>Sede 1</option>
+												<option>Sede 2</option>
+												<option>Sede 3</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-6">
+									   <div class="input-group input-group-sm mb-2">
+											<div class="input-group-prepend">
+												<label class="input-group-text" id="inputGroup-sizing-sm">Grupo de Venta</label>
+											</div>
+											<select class="custom-select" id="inputGroup-sizing-sm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" >
+												<option>Todos...</option>
+												<option>Grupo 1</option>
+												<option>Grupo 2</option>
+												<option>Grupo 3</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-6">
+									   <div class="input-group input-group-sm mb-2">
+											<div class="input-group-prepend">
+												<label class="input-group-text" id="inputGroup-sizing-sm">Vendedor</label>
+											</div>
+											<select class="custom-select" id="inputGroup-sizing-sm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" >
+												<option>Todos...</option>
+												<option>Vendedor 1</option>
+												<option>Vendedor 2</option>
+												<option>Vendedor 3</option>
+												<option>Vendedor 4</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-6">
+										<div class="input-group input-group-sm mb-2">
+											<div class="input-group-prepend">
+												<label class="input-group-text" id="inputGroup-sizing-sm">Tipo Prospecto </label>
+											</div>
+											<select class="custom-select" id="inputGroup-sizing-sm" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+												<option>Todos...</option>
+												<option>Cliente nuevo</option>
+												<option>Cliente existente</option>
+											</select>
+										</div>
+									</div>										
+									<div class="col-md-3 col-sm-6">
+									   <div class="input-group input-group-sm mb-2">
+											<div class="input-group-prepend">
+												<label class="input-group-text" id="inputGroup-sizing-sm">Origen</label>
+											</div>
+											<select class="custom-select" id="inputGroup-sizing-sm" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+												<option>Todos...</option>
+												<option> REFERIDO</option>
+												<option> FACEBOOK</option>
+												<option> PÁGINA WEB</option>
+												<option> PROSPECCIÓN PROPIA</option>
+											</select>
+										</div>
+									</div>	
+									<div class="col-md-3 col-sm-6">
+										<div class="input-group input-group-sm mb-2">
+											<div class="input-group-prepend">
+												<label class="input-group-text" id="inputGroup-sizing-sm">Año</label>
+											</div>
+											<select class="custom-select" id="inputGroup-sizing-sm" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+												<option>Todos...</option>
+												<option selected>2023</option>
+												<option>2022 </option>
+												<option>2021 </option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-6">
+										<div class="input-group input-group-sm mb-2">
+											<div class="input-group-prepend" style="width:100%">
+												<label class="input-group-text" id="inputGroup-sizing-sm">Período</label>
+												<select class="multiselect multiselect-custom" id="cboPeriodo" aria-label="Small" aria-describedby="inputGroup-sizing-sm" multiple="multiple" style="width: 100%">													
+												</select>
+											</div>											
+										</div>
+									</div>
+									<div class="col-md-3 col-sm-6">
+										<div class="input-group input-group-sm mb-2">
+											<div class="input-group-prepend" style="width: 100%">
+												<label class=" input-group-text">
+													<input id="ActivarFiltroFecha" type="checkbox">
+													<span></span>
+												</label>
+												<label class="input-group-text">F.Actividad</label>
+												<div id="reportrange" class="disabled_Boton" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+													<span>01/01/2026 - 31/01/2026</span> <!-- mostrar por defecto el mes en curso al activar el check-->
+												</div>
+											</div>
+										</div>
+									</div>																	
+									<div class="col-md-3 col-sm-6">
+									   <div class="input-group input-group-sm mb-2">
+											<div class="input-group-prepend">
+												<label class="input-group-text" id="inputGroup-sizing-sm">Actividad</label>
+											</div>
+											<select class="custom-select" id="inputGroup-sizing-sm" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+												<option>Todos...</option>
+												<option>Llamada</option>
+												<option>Correo</option>
+												<option>Visita</option>
+												<option>Cita</option>
+												<option>Nota</option>
+											</select>
+										</div>
+									</div>																		
+									<div class="col-md-3 col-sm-6">
+									   <div class="input-group input-group-sm mb-2">
+											<div class="input-group-prepend">
+												<label class="input-group-text" id="inputGroup-sizing-sm">Estado Actividad</label>
+											</div>
+											<select class="custom-select" id="inputGroup-sizing-sm" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+												<option>Todos...</option>
+												<option>Programada</option>
+												<option>Realizada</option>
+												<option>Vencida</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-3 text-right">
+										<button id="btnBuscarEvento" type="button" class="btn btn-erp"><i class="fa fa-search"></i> Buscar</button>
+									</div>
+								</div>
+							</div>							
+						</div>						
+						<div class="body">
+							<div class="row clearfix">
+								<div class="col-md-12 col-sm-12">
+									<div class="shadow-lg p-3 mb-3 bg-white rounded">
+										<div class="row clearfix">                            
+											<div class="col-md-12 col-sm-12">                            
+												<div class="table-responsive">
+													<table id="TablaPerfiles" class="table table-bordered table-striped table-condensed table-hover">
+														<thead>
+															<tr class="tablelejago">
+																<th><center>ID</center></th>
+																<th><center>F.Registro Prospecto</center></th>
+																<th><center>DNI</center></th>
+																<th><center>Prospecto</center></th>
+																<th><center>Evento</center></th>											
+																<th><center>Fecha Evento</center></th>
+																<th><center>Hora Evento</center></th>
+																<th><center>Vendedor</center></th>
+																<th><center>Fecha Registro</center></th>											
+																<th><center>Estado</center></th>	
+																<th><center>Comentario</center></th>	
+															</tr>
+														</thead>
+														<tbody>
+															<tr class="tablelejago">
+																<td><center><a href="javascript:void(0);" data-toggle="modal" data-target="#edit_evento"><b>1</b></a></center></td>
+																<td><center>01/08/2022</center></td>
+																<td><a href="comercial_crm_prospecto_detalle.html"><center>12345678</a></center></td>
+																<td><a href="comercial_crm_prospecto_detalle.html">Andrés Capioca Stabile</a></td>
+																<td><center>Visita</center></td>
+																<td><center>01/08/2022</center></td>
+																<td><center>10:30 a.m.</center></td>
+																<td><b>Elí Vera Guevara</b></td>
+																<td><center>01/08/2022 10:00 a.m.</center></td>											
+																<td style="background:#ff0000; color:#ffffff;"><center><b> Vencido</b></center></td>
+																<td><center> </center></td>
+															</tr>
+															<tr class="tablelejago">
+																<td><center><a href="javascript:void(0);" data-toggle="modal" data-target="#edit_evento"><b>2</b></a></center></td>
+																<td><center>01/08/2022</center></td>
+																<td><a href="comercial_crm_prospecto_detalle.html"><center>12345678</a></center></td>
+																<td><a href="comercial_crm_prospecto_detalle.html">Juana Sánchez Tapia</a></td>
+																<td><center>Cita</center></td>
+																<td><center>01/07/2022</center></td>
+																<td><center>12:30 p.m.</center></td>
+																<td><b>Elí Vera Guevara</b></td>
+																<td><center>01/08/2022 10:00 a.m.</center></td>
+																<td style="background:#566ee7; color:#ffffff;"><center><b> Programado</b></center></td>
+																<td><center> </center></td>
+															</tr>
+															<tr class="tablelejago">
+																<td><center><a href="javascript:void(0);" data-toggle="modal" data-target="#edit_evento"><b>3</b></a></center></td>
+																<td><center>01/08/2022</center></td>
+																<td><a href="comercial_crm_prospecto_detalle.html"><center>12345678</a></center></td>
+																<td><a href="comercial_crm_prospecto_detalle.html">Carlos Torres lara</a></td>
+																<td><center>Cita</center></td>
+																<td><center>01/07/2022</center></td>
+																<td><center>04:30 p.m.</center></td>
+																<td><b>Elí Vera Guevara</b></td>
+																<td><center>01/08/2022 10:00 a.m.</center></td>
+																<td style="background:#5000e7; color:#ffffff;"><center><b> Realizado</b></center></td>
+																<td><center> </center></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>                                                               
+										</div>														
+									</div>
+								</div>
+							</div>								
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>    
+</div>
+
+<!-- Inicio Modals  -->
+	<div class="modal animated fadeIn" id="add_evento" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h6 class="title" id="TituloModal">Agregar Evento</h6>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+				</div>
+				<div class="modal-body">
+					<div class="row clearfix">					
+						<div class="col-md-12 col-sm-12">
+						   <div class="input-group input-group-sm mb-2">
+								<div class="input-group-prepend">
+									<label class="input-group-text" id="inputGroup-sizing-sm">Vendedor</label>
+								</div>
+								<select class="custom-select" id="inputGroup-sizing-sm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" disabled>
+									<option>Seleccionar...</option>
+									<option selected>VERA GUEVARA ELÍ</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+						   <div class="input-group input-group-sm mb-2">
+								<div class="input-group-prepend">
+									<label class="input-group-text" id="inputGroup-sizing-sm">Prospecto</label>
+								</div>
+								<select class="custom-select" id="inputGroup-sizing-sm" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+									<option>Seleccionar...</option><!-- usar select2 -->
+								</select>
+							</div>
+						</div>	
+						<div class="col-md-12 col-sm-12">
+						   <div class="input-group input-group-sm mb-2">
+								<div class="input-group-prepend">
+									<label class="input-group-text" id="inputGroup-sizing-sm">Evento</label>
+								</div>
+								<select class="custom-select" id="inputGroup-sizing-sm" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+									<option>Seleccionar...</option>
+									<option>Llamada</option>
+									<option>Correo</option>
+									<option>Visita</option>
+									<option>Cita</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-8 col-sm-8">
+							<div class="input-group input-group-sm mb-2">
+								<div class="input-group-prepend">
+									<label class="input-group-text" id="inputGroup-sizing-sm">Fecha Programada</label>
+								</div>
+								<input data-provide="datepicker" data-date-autoclose="true" class="form-control" value="" placeholder="Seleccione...">
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4">
+							<div class="input-group input-group-sm mb-2">
+								<div class="input-group-prepend">
+									<label class="input-group-text" id="inputGroup-sizing-sm">Hora</label>
+								</div>
+								<input data-provide="timepicker" data-date-autoclose="true" class="form-control" value="" placeholder="Seleccione...">
+							</div>
+						</div>
+						<div class="col-md-8 col-sm-8">
+							<div class="input-group input-group-sm mb-2">
+								<div class="input-group-prepend">
+									<label class="input-group-text" id="inputGroup-sizing-sm">Fecha Realizada</label>
+								</div>
+								<input data-provide="datepicker" data-date-autoclose="true" class="form-control" value="" placeholder="Seleccione...">
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4">
+							<div class="input-group input-group-sm mb-2">
+								<div class="input-group-prepend">
+									<label class="input-group-text" id="inputGroup-sizing-sm">Hora</label>
+								</div>
+								<input data-provide="timepicker" data-date-autoclose="true" class="form-control" value="" placeholder="Seleccione...">
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">						
+							<div class="form-group">                                    
+								<span>Comentario:</span>
+								<textarea class="form-control" rows="2" placeholder="Comentarios..." value="" ></textarea>
+							</div>
+						</div>							
+						<div class="col-md-6 col-sm-12">
+						   <div class="input-group input-group-sm mb-2">
+								<div class="input-group-prepend">
+									<label class="input-group-text" id="inputGroup-sizing-sm">Estado</label>
+								</div>
+								<select class="custom-select" id="inputGroup-sizing-sm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" disabled>
+									<option selected>Programado</option>
+									<option>Realizado</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button id="BtnGuardar" type="button" class="btn btn-primary">Guardar</button>
+					<button id="BtnCancelar" type="button" data-dismiss="modal" class="btn btn-secondary">Cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal animated fadeIn" id="edit_evento" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h6 class="title" id="TituloModal">Detalle de Evento: 1</h6>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+				</div>
+				<div class="modal-body">
+					<div class="row clearfix">					
+						<div class="col-md-12 col-sm-12">
+						   <div class="input-group input-group-sm mb-2">
+								<div class="input-group-prepend">
+									<label class="input-group-text" id="inputGroup-sizing-sm">Vendedor</label>
+								</div>
+								<select class="custom-select" id="inputGroup-sizing-sm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" disabled>
+									<option>Seleccionar...</option>
+									<option selected>VERA GUEVARA ELÍ</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+						   <div class="input-group input-group-sm mb-2">
+								<div class="input-group-prepend">
+									<label class="input-group-text" id="inputGroup-sizing-sm">Prospecto</label>
+								</div>
+								<select class="custom-select" id="inputGroup-sizing-sm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" disabled>
+									<option selected>Andrés Capioca Stabile</option><!-- usar select2 -->
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+						   <div class="input-group input-group-sm mb-2">
+								<div class="input-group-prepend">
+									<label class="input-group-text" id="inputGroup-sizing-sm">Evento</label>
+								</div>
+								<select class="custom-select" id="inputGroup-sizing-sm" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+									<option>Seleccionar...</option>
+									<option>MENSAJE</option>
+									<option>LLAMADA</option>
+									<option>CORREO</option>
+									<option>REUNIÓN</option>
+									<option>PRESENTACIÓN</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-8 col-sm-8">
+							<div class="input-group input-group-sm mb-2">
+								<div class="input-group-prepend">
+									<label class="input-group-text" id="inputGroup-sizing-sm">Fecha Programada</label>
+								</div>
+								<input data-provide="datepicker" data-date-autoclose="true" class="form-control" value="" placeholder="Seleccione...">
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4">
+							<div class="input-group input-group-sm mb-2">
+								<div class="input-group-prepend">
+									<label class="input-group-text" id="inputGroup-sizing-sm">Hora</label>
+								</div>
+								<input data-provide="timepicker" data-date-autoclose="true" class="form-control" value="" placeholder="Seleccione...">
+							</div>
+						</div>
+						<div class="col-md-8 col-sm-8">
+							<div class="input-group input-group-sm mb-2">
+								<div class="input-group-prepend">
+									<label class="input-group-text" id="inputGroup-sizing-sm">Fecha Realizada</label>
+								</div>
+								<input data-provide="datepicker" data-date-autoclose="true" class="form-control" value="" placeholder="Seleccione...">
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4">
+							<div class="input-group input-group-sm mb-2">
+								<div class="input-group-prepend">
+									<label class="input-group-text" id="inputGroup-sizing-sm">Hora</label>
+								</div>
+								<input data-provide="timepicker" data-date-autoclose="true" class="form-control" value="" placeholder="Seleccione...">
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">						
+							<div class="form-group">                                    
+								<span>Comentario:</span>
+								<textarea class="form-control" rows="2" placeholder="Comentarios..." value="" ></textarea>
+							</div>
+						</div>							
+						<div class="col-md-6 col-sm-12">
+						   <div class="input-group input-group-sm mb-2">
+								<div class="input-group-prepend">
+									<label class="input-group-text" id="inputGroup-sizing-sm">Estado</label>
+								</div>
+								<select class="custom-select" id="inputGroup-sizing-sm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" disabled>
+									<option selected>Programado</option>
+									<option>Realizado</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<!--<button id="BtnActualizar" type="button" class="btn btn-primary">Actualizar</button> -->
+					<button id="BtnCancelar" type="button" data-dismiss="modal" class="btn btn-secondary">Cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+<!--Fin Modals-->
+
+
+<!-- Javascript -->
+<script src="assets/bundles/libscripts.bundle.js"></script>    
+<script src="assets/bundles/vendorscripts.bundle.js"></script>
+
+<script src="assets/bundles/datatablescripts.bundle.js"></script>
+<script src="../assets/vendor/jquery-datatable/buttons/dataTables.buttons.min.js"></script>
+<script src="../assets/vendor/jquery-datatable/buttons/buttons.bootstrap4.min.js"></script>
+<script src="../assets/vendor/jquery-datatable/buttons/buttons.colVis.min.js"></script>
+<script src="../assets/vendor/jquery-datatable/buttons/buttons.html5.min.js"></script>
+<script src="../assets/vendor/jquery-datatable/buttons/buttons.print.min.js"></script>
+<script src="../assets/vendor/bootstrap-multiselect/bootstrap-multiselect.js"></script>
+<script src="../assets/vendor/sweetalert/sweetalert.min.js"></script> <!-- SweetAlert Plugin Js --> 
+
+<script src="assets/bundles/mainscripts.bundle.js"></script>
+<script src="assets/js/pages/tables/jquery-datatable.js"></script>
+<script src="assets/js/pages/ui/dialogs.js"></script>
+<script src="assets/js/app.min.js" type="text/javascript"></script>
+<script src="assets/js/traduccion_tablas.js" type="text/javascript"></script>
+
+<script>
+    $(document).ready(function () {
+	    ComboPeriodo("#cboPeriodo", 18)	
+        $("#TablaPerfiles").DataTable();
+    });
+
+    $("#notificaciones").on("click", function () {
+        $("#listaNotificaciones").show();
+    })
+
+    $("#main-content").on("click", function () {
+        $("#listaNotificaciones").hide();
+    })    
+
+	$("#txtdni").change(function () {
+        ConsultaDni();
+    })
+</script>
+
+<script type="text/javascript">
+
+
+function ConsultaDni() {
+
+    var cdni= $("#txtdni").val();
+  
+    $.ajax({
+        type: 'GET',
+        url: `https://dniruc.apisperu.com/api/v1/dni/${cdni}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IndlYmRlc2luZ2NwQGdtYWlsLmNvbSJ9.qFn9y_KTl7UqHWIGf-0DdyBZ22LsOzlAjJSgz9TS_Ew`,
+        contentType: "application/json; charset=utf-8",
+        async: true,
+        cache: false,
+        beforeSend: function () {
+           
+        },
+        success: function (response) {
+
+            console.log(response)
+            $("#txtNombres").val(response.nombres);
+            $("#txtApellidoPaterno").val(response.apellidoPaterno);
+            $("#txtApellidoMaterno").val(response.apellidoMaterno);
+
+        },
+        error: function (xhr, status, error) {
+        },
+        complete: function () {
+        }
+    });
+
+}
+   
+</script>
+
+<script type="text/javascript">
+
+	function ComboPeriodo(componente, seleccionado = null) {												
+
+        [
+			{ Id: "01", Text: "Q01" },
+			{ Id: "02", Text: "Q02" },
+			{ Id: "03", Text: "Q03" },
+			{ Id: "04", Text: "Q04" },
+			{ Id: "05", Text: "Q05" },
+			{ Id: "06", Text: "Q06" },
+			{ Id: "07", Text: "Q07" },
+			{ Id: "08", Text: "Q08" },
+			{ Id: "09", Text: "Q09" },
+			{ Id: "10", Text: "Q10" },
+			{ Id: "11", Text: "Q11" },
+			{ Id: "12", Text: "Q12" },
+			{ Id: "13", Text: "Q13" },
+			{ Id: "14", Text: "Q14" },
+			{ Id: "15", Text: "Q15" },
+			{ Id: "16", Text: "Q16" },			
+            { Id: "17", Text: "Q17" },
+            { Id: "18", Text: "Q18" },
+            { Id: "19", Text: "Q19" },
+            { Id: "20", Text: "Q20" },
+            { Id: "21", Text: "Q21" },
+            { Id: "22", Text: "Q22" },
+            { Id: "23", Text: "Q23" },
+            { Id: "24", Text: "Q24" }
+           
+        ].forEach((value, index) => {
+            $(componente).append(`<option value="${value.Id}">${value.Text}</option>`);
+        })
+
+        IniciarMultiSelect(componente, seleccionado);
+
+    }
+
+
+function IniciarMultiSelect(componente, seleccionado = null) {
+	
+    $(componente).multiselect('destroy');
+
+    $(componente).multiselect({
+        selectAllText: 'Todos...',
+        includeSelectAllOption: true,
+        selectAllValue: -1,
+        nonSelectedText: "Ninguna seleccionada",
+        nSelectedText: 'seleccionada',
+        allSelectedText: 'Todos seleccionados',
+    }).multiselect("selectAll", true).multiselect('updateButtonText');
+
+    $(".multiselect").parent(".btn-group").css("width", "100%");
+    $(".multiselect").parent(".multiselect-native-select").css("width", "100%");
+    $(".multiselect-container.dropdown-menu").css("width", "100%");
+    $(".multiselect-container.dropdown-menu").css("width", "100%");
+    $(".multiselect-native-select").css("width", "100%");
+
+    if (seleccionado != null) {
+        $(componente).multiselect('select', seleccionado.split(",")).multiselect('updateButtonText');
+    } else {
+        $(componente).multiselect("selectAll", false).multiselect('updateButtonText');
+    }
+
+}
+
+function ConsultaDni() {
+
+    var cdni= $("#txtdni").val();
+  
+    $.ajax({
+        type: 'GET',
+        url: `https://dniruc.apisperu.com/api/v1/dni/${cdni}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IndlYmRlc2luZ2NwQGdtYWlsLmNvbSJ9.qFn9y_KTl7UqHWIGf-0DdyBZ22LsOzlAjJSgz9TS_Ew`,
+        contentType: "application/json; charset=utf-8",
+        async: true,
+        cache: false,
+        beforeSend: function () {
+           
+        },
+        success: function (response) {
+
+            console.log(response)
+            $("#txtNombres").val(response.nombres);
+            $("#txtApellidoPaterno").val(response.apellidoPaterno);
+            $("#txtApellidoMaterno").val(response.apellidoMaterno);
+
+        },
+        error: function (xhr, status, error) {
+        },
+        complete: function () {
+        }
+    });
+
+}
+   
+</script>
+
+</body>
+</html>

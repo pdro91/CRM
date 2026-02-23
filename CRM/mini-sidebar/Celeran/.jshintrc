@@ -1,0 +1,9 @@
+{
+	"globals": {"moment": true, "Hammer": true},
+	"jquery": true,
+	"-W032": true,
+	"undef": false,
+	//"maxcomplexity": 10,
+	"camelcase": false,
+	"curly": false
+}

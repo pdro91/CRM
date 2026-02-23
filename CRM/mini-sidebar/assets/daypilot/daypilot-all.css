@@ -1,0 +1,32 @@
+  .scheduler_default_corner div{
+    display: none;
+  }
+  .scheduler_default_corner{
+   background: #dddddd !important;
+  }
+  .scheduler_default_event_inner,.scheduler_default_rowheader_inner_indent,.scheduler_default_timeheadergroup_inner,.scheduler_default_timeheader_float_inner,.scheduler_default_timeheadercol_inner,.scheduler_default_scrollable{
+    font-family: "Ubuntu",sans-serif !important;
+    font-size: 12px !important;
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+
+  .scheduler_default_rowheader,.scheduler_default_rowheader_inner,.scheduler_default_timeheadergroup_inner,.scheduler_default_timeheader_float_inner,.scheduler_default_timeheadercol_inner{
+
+    background: #dddddd !important;
+  }
+
+  .scheduler_default_tree_image_collapse, .scheduler_default_tree_image_expand{
+    background-size: 12px;  
+  }
+  .scheduler_default_rowheader_inner_text{
+    margin-left: 5px;
+  }
+  .scheduler_default_event_inner{    
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+    background: #dee2e6 !important;
+  }
+  .scheduler_default_event_bar_inner{
+    background-color: #3b4466 !important
+  }
